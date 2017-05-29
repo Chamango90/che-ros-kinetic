@@ -28,7 +28,7 @@
     "projects": [
       {
         "links": [],
-        "name": "console-java-simple",
+        "name": "beginner-tutorials",
         "attributes": {
           "contribute_to_branch": [
             "master"
@@ -36,11 +36,11 @@
         },
         "type": "maven",
         "source": {
-          "location": "https://github.com/che-samples/console-java-simple.git",
+          "location": "https://github.com/ros/catkin_tutorials/tree/master/create_package_pubsub/catkin_ws/src/beginner_tutorials",
           "type": "git",
           "parameters": {}
         },
-        "path": "/console-java-simple",
+        "path": "/beginner-tutorials",
         "problems": [],
         "mixins": [
           "pullrequest"
