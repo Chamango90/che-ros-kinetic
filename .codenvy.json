@@ -1,51 +1,78 @@
 {
-  "name": "ros-kinetic",
-  "environments": {
-    "wksp-xfn5": {
-      "recipe": {
-        "location": "jhechtbauer/che-ros-kinetic",
-        "type": "dockerimage"
-      },
-      "machines": {
-        "dev-machine": {
-          "attributes": {
-            "memoryLimitBytes": "2147483648"
-          },
-          "servers": {},
-          "agents": [
-            "org.eclipse.che.exec",
-            "org.eclipse.che.terminal",
-            "org.eclipse.che.ws-agent",
-            "org.eclipse.che.ssh"
-          ]
+  "v": "4.0",
+  "name": "ros-kinetic-factory",
+  "workspace": {
+    "defaultEnv": "java",
+    "environments": {
+      "java": {
+        "machines": {
+          "dev-machine": {
+            "attributes": {
+              "memoryLimitBytes": "2147483648"
+            },
+            "servers": {},
+            "agents": [
+              "org.eclipse.che.ssh",
+              "org.eclipse.che.ws-agent",
+              "org.eclipse.che.terminal",
+              "org.eclipse.che.exec"
+            ]
+          }
+        },
+        "recipe": {
+          "location": "jhechtbauer/che-ros-kinetic",
+          "type": "dockerimage"
         }
       }
-    }
-  },
-  "commands": [
-    {
-      "name": "run",
-      "type": "custom",
-      "attributes": {},
-      "commandLine": "cd /catkin_ws && /ros_entrypoint.sh catkin_make"
-    }
-  ],
-  "projects": [
-    {
-      "name": "test",
-      "type": "cpp",
-      "path": "/test",
-      "attributes": {},
-      "source": {
-        "location": "",
-        "type": "",
-        "parameters": {}
+    },
+    "projects": [
+      {
+        "links": [],
+        "name": "console-java-simple",
+        "attributes": {
+          "contribute_to_branch": [
+            "master"
+          ]
+        },
+        "type": "maven",
+        "source": {
+          "location": "https://github.com/che-samples/console-java-simple.git",
+          "type": "git",
+          "parameters": {}
+        },
+        "path": "/console-java-simple",
+        "problems": [],
+        "mixins": [
+          "pullrequest"
+        ]
+      }
+    ],
+    "name": "ros-kinetic",
+    "commands": [
+      {
+        "commandLine": "mvn -f ${current.project.path} clean install",
+        "name": "console-java-simple: build",
+        "attributes": {
+          "previewUrl": ""
+        },
+        "type": "mvn"
       },
-      "problems": [],
-      "mixins": [],
-      "workspaceId": "workspaceenkx5f6fxhc6dmb9",
-      "workspaceName": "ros-kinetic"
-    }
-  ],
-  "defaultEnv": "wksp-xfn5"
+      {
+        "commandLine": "mvn -f ${current.project.path} clean install && java -jar ${current.project.path}/target/*.jar",
+        "name": "console-java-simple: run",
+        "attributes": {
+          "previewUrl": ""
+        },
+        "type": "mvn"
+      }
+    ],
+    "links": []
+  },
+  "id": "factorygkwhk36yxqbik3q8",
+  "creator": {
+    "name": "jonathanhechtbauer",
+    "email": "jonathan.hechtbauer@gmail.com",
+    "created": 1496087902615,
+    "userId": "userr124qr1rotadt7jo"
+  }
 }
