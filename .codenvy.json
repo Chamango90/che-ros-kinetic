@@ -28,7 +28,7 @@
     "projects": [
       {
         "links": [],
-        "name": "talker",
+        "name": "ros_tutorials",
         "attributes": {
           "contribute_to_branch": [
             "master"
@@ -36,11 +36,11 @@
         },
         "type": "maven",
         "source": {
-          "location": "https://github.com/ros/ros_tutorials/tree/lunar-devel/roscpp_tutorials/talker.git",
+          "location": "https://github.com/ros/ros_tutorials",
           "type": "git",
           "parameters": {}
         },
-        "path": "/talker",
+        "path": "/ros_tutorials",
         "problems": [],
         "mixins": [
           "pullrequest"
