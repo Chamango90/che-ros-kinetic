@@ -1,123 +1,51 @@
 {
-  "v":"4.0",
-  "name":"ros-kinetic",
-  "workspace":{
-    "defaultEnv":"ros-kinetic",
-    "environments":[
-      {
-        "name":"ros-kinetic",
-        "machineConfigs":[
-          {
-            "limits":{
-              "ram":2000
-            },
-            "name":"ws-machine",
-            "type":"docker",
-            "source":{
-              "content":"jhechtbauer/che-ros-kinetic",
-              "type":"dockerfile"
-            },
-            "dev":true,
-            "servers":[
-
-            ],
-            "envVariables":{
-
-            },
-            "links":[
-
-            ]
-          }
-        ]
-      }
-    ],
-    "projects":[
-      {
-        "links":[
-
-        ],
-        "name":"beginner_tutorials",
-        "attributes":{
-          "maven.artifactId":[
-            "beginner_tutorials"
-          ],
-          "maven.test.source.folder":[
-            "src/test/java"
-          ],
-          "maven.parent.version":[
-            ""
-          ],
-          "maven.parent.groupId":[
-            ""
-          ],
-          "maven.version":[
-            "1.0.0-SNAPSHOT"
-          ],
-          "languageVersion":[
-            "1.8.0_45"
-          ],
-          "language":[
-            "java"
-          ],
-          "contribute_to_branch":[
-            "master"
-          ],
-          "maven.source.folder":[
-            "src/main/java"
-          ],
-          "git.repository.remotes":[
-            "https://github.com/ipa-jfh/che-ros-kinetic"
-          ],
-          "maven.groupId":[
-            "org.testframework.samples"
-          ],
-          "containsJavaFiles":[
-            "true"
-          ],
-          "maven.packaging":[
-            "war"
-          ],
-          "vcs.provider.name":[
-            "git"
-          ],
-          "git.current.branch.name":[
-            "master"
-          ],
-          "maven.parent.artifactId":[
-            ""
+  "name": "ros-kinetic",
+  "environments": {
+    "wksp-xfn5": {
+      "recipe": {
+        "location": "jhechtbauer/che-ros-kinetic",
+        "type": "dockerimage"
+      },
+      "machines": {
+        "dev-machine": {
+          "attributes": {
+            "memoryLimitBytes": "2147483648"
+          },
+          "servers": {},
+          "agents": [
+            "org.eclipse.che.exec",
+            "org.eclipse.che.terminal",
+            "org.eclipse.che.ws-agent",
+            "org.eclipse.che.ssh"
           ]
-        },
-        "type":"maven",
-        "path":"/spring-petclinic",
-        "description":"A hello world Java application.",
-        "problems":[
-
-        ],
-        "mixins":[
-          "pullrequest",
-          "git"
-        ]
+        }
       }
-    ],
-    "name":"spring-petclinic",
-    "commands":[
-      {
-        "commandLine":"cd /catkin_ws && catkin_make",
-        "name":"build",
-        "attributes":{
-          "previewUrl":""
-        },
-        "type":"mvn"
-      }
-    ],
-    "links":[
-
-    ]
-  },
-  "ide":{
-    "onProjectsLoaded":{
-      "actions":[
-      ]
     }
-  }
+  },
+  "commands": [
+    {
+      "name": "run",
+      "type": "custom",
+      "attributes": {},
+      "commandLine": "cd /catkin_ws && /ros_entrypoint.sh catkin_make"
+    }
+  ],
+  "projects": [
+    {
+      "name": "test",
+      "type": "cpp",
+      "path": "/test",
+      "attributes": {},
+      "source": {
+        "location": "",
+        "type": "",
+        "parameters": {}
+      },
+      "problems": [],
+      "mixins": [],
+      "workspaceId": "workspaceenkx5f6fxhc6dmb9",
+      "workspaceName": "ros-kinetic"
+    }
+  ],
+  "defaultEnv": "wksp-xfn5"
 }
