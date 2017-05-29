@@ -50,16 +50,8 @@
     "name": "ros-kinetic",
     "commands": [
       {
-        "commandLine": "mvn -f ${current.project.path} clean install",
-        "name": "console-java-simple: build",
-        "attributes": {
-          "previewUrl": ""
-        },
-        "type": "mvn"
-      },
-      {
-        "commandLine": "mvn -f ${current.project.path} clean install && java -jar ${current.project.path}/target/*.jar",
-        "name": "console-java-simple: run",
+        "commandLine": "cd /catkin_ws && /ros_entrypoint.sh catkin_make",
+        "name": "ros-kinetic: build",
         "attributes": {
           "previewUrl": ""
         },
