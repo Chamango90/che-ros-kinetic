@@ -36,7 +36,7 @@
         },
         "type": "maven",
         "source": {
-          "location": "https://github.com/ros/ros_tutorials/tree/lunar-devel/roscpp_tutorials/talker",
+          "location": "https://github.com/ros/ros_tutorials/tree/lunar-devel/roscpp_tutorials/talker.git",
           "type": "git",
           "parameters": {}
         },
