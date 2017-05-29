@@ -28,7 +28,7 @@
     "projects": [
       {
         "links": [],
-        "name": "console-cpp-simple",
+        "name": "talker",
         "attributes": {
           "contribute_to_branch": [
             "master"
@@ -36,11 +36,11 @@
         },
         "type": "maven",
         "source": {
-          "location": "https://github.com/che-samples/console-cpp-simple",
+          "location": "https://github.com/ros/ros_tutorials/tree/lunar-devel/roscpp_tutorials/talker",
           "type": "git",
           "parameters": {}
         },
-        "path": "/console-cpp-simple",
+        "path": "/talker",
         "problems": [],
         "mixins": [
           "pullrequest"
