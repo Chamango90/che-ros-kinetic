@@ -40,7 +40,7 @@
           "type": "git",
           "parameters": {}
         },
-        "path": "/ros_tutorials",
+        "path": "/ros_tutorials/roscpp_tutorials",
         "problems": [],
         "mixins": [
           "pullrequest"
@@ -51,20 +51,30 @@
     "commands": [
       {
         "commandLine": "cd /catkin_ws && /ros_entrypoint.sh catkin_make",
-        "name": "ros-kinetic: build",
+        "name": "catkin_make",
         "attributes": {
           "previewUrl": ""
         },
-        "type": "mvn"
+        "type": "run"
       }
     ],
     "links": []
   },
+  "ide": {
+    "onProjectsLoaded": {
+      "actions": [
+        {
+          "properties": {
+            "name": "catkin_make"
+          },
+          "id": "runCommand"
+        }
+      ]
+    }
+  }
   "id": "factorygkwhk36yxqbik3q8",
   "creator": {
     "name": "jonathanhechtbauer",
-    "email": "jonathan.hechtbauer@gmail.com",
-    "created": 1496087902615,
-    "userId": "userr124qr1rotadt7jo"
+    "email": "jonathan.hechtbauer@ipa.fraunhofer.de"
   }
 }
