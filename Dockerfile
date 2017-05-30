@@ -7,7 +7,9 @@ RUN . /opt/ros/kinetic/setup.sh \
  && catkin_init_workspace \
  && ln -s /projects ~/catkin_ws/src/projects \
  && cd ~/catkin_ws \
- && catkin_make        
+ && catkin_make
+
+RUN /bin/bash -c "echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc"     
  
  # Install support tools
  RUN apt-get update && apt-get install --no-install-recommends -y \
@@ -18,4 +20,4 @@ RUN . /opt/ros/kinetic/setup.sh \
 
 WORKDIR /projects 
 
-CMD ~/catkin_ws/devel/env.sh tail -f /dev/null
+CMD tail -f /dev/null
