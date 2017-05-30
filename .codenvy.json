@@ -1,35 +1,34 @@
-
 {
   "v": "4.0",
   "name": "ros-kinetic-factory",
   "workspace": {
-    "defaultEnv": "java",
-    "environments": {
-      "java": {
-        "machines": {
-          "dev-machine": {
-            "attributes": {
-              "memoryLimitBytes": "2147483648"
+    "defaultEnv": "cpp",
+    "environments": [
+      {
+        "name": "ros-kinetic",
+        "machineConfigs": [
+          {
+            "limits": {
+              "ram": 1000
             },
-            "servers": {},
-            "agents": [
-              "org.eclipse.che.ssh",
-              "org.eclipse.che.ws-agent",
-              "org.eclipse.che.terminal",
-              "org.eclipse.che.exec"
-            ]
+            "name": "ws-machine",
+            "type": "docker",
+            "source": {
+              "location": "https://raw.githubusercontent.com/ipa-jfh/che-ros-kinetic/master/Dockerfile",
+              "type": "dockerfile"
+            },
+            "dev": true,
+            "servers": [],
+            "envVariables": {},
+            "links": []
           }
-        },
-        "recipe": {
-          "location": "jhechtbauer/che-ros-kinetic",
-          "type": "dockerimage"
-        }
+        ]
       }
-    },
+    ],
     "projects": [
       {
         "links": [],
-        "name": "che-ros-kinetic",
+        "name": "ros-hello-world",
         "attributes": {
           "contribute_to_branch": [
             "master"
@@ -37,11 +36,11 @@
         },
         "type": "blank",
         "source": {
-          "location": "https://github.com/ipa-jfh/che-ros-kinetic",
+          "location": "https://github.com/ander-ansuategi/ros-hello-world",
           "type": "git",
           "parameters": {}
         },
-        "path": "/che-ros-kinetic",
+        "path": "/ros-hello-world",
         "problems": [],
         "mixins": [
           "git"
