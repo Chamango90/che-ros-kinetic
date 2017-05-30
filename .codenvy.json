@@ -2,28 +2,24 @@
   "v": "4.0",
   "name": "ros-kinetic-factory",
   "workspace": {
-    "defaultEnv": "java",
-    "environments": {
-      "java": {
-        "machines": {
-          "dev-machine": {
-            "attributes": {
-              "memoryLimitBytes": "2147483648"
+    "defaultEnv": "cpp",
+      "environments": [
+      {
+        "name": "cpp",
+        "machineConfigs": [
+          {
+            "limits": {
+              "ram": 1000
             },
-            "servers": {},
-            "agents": [
-              "org.eclipse.che.ssh",
-              "org.eclipse.che.ws-agent",
-              "org.eclipse.che.terminal",
-              "org.eclipse.che.exec"
-            ]
+            "name": "ws-machine",
+            "type": "docker",
+            "source": {
+              "location": "https://raw.githubusercontent.com/ipa-jfh/che-ros-kinetic/master/Dockerfile",
+              "type": "recipe"
+            },
+            "dev": true
           }
-        },
-        "recipe": {
-          "location": "jhechtbauer/che-ros-kinetic",
-          "type": "dockerimage"
-        }
-      }
+        ]
     },
     "projects": [
       {
@@ -34,7 +30,7 @@
             "master"
           ]
         },
-        "type": "maven",
+        "type": "blank",
         "source": {
           "location": "https://github.com/ipa-jfh/che-ros-kinetic",
           "type": "git",
@@ -43,7 +39,7 @@
         "path": "/che-ros-kinetic",
         "problems": [],
         "mixins": [
-          "pullrequest"
+          "git"
         ]
       }
     ],
