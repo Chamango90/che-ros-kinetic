@@ -36,11 +36,11 @@
         },
         "type": "maven",
         "source": {
-          "location": "https://github.com/ander-ansuategi/ros-hello-world",
+          "location": "https://github.com/ipa-jfh/che-ros-kinetic",
           "type": "git",
           "parameters": {}
         },
-        "path": "/ros-hello-world",
+        "path": "/che-ros-kinetic",
         "problems": [],
         "mixins": [
           "pullrequest"
