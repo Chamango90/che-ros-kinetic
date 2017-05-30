@@ -3,9 +3,9 @@
   "name": "ros-kinetic-factory",
   "workspace": {
     "defaultEnv": "cpp",
-      "environments": [
+    "environments": [
       {
-        "name": "cpp",
+        "name": "dotnet",
         "machineConfigs": [
           {
             "limits": {
@@ -14,13 +14,17 @@
             "name": "ws-machine",
             "type": "docker",
             "source": {
-              "location": "https://raw.githubusercontent.com/ipa-jfh/che-ros-kinetic/master/Dockerfile",
-              "type": "recipe"
+              "location": "http://beta.codenvy.com/api/recipe/recipeyh2ue3us1irgy3b6/script",
+              "type": "dockerfile"
             },
-            "dev": true
+            "dev": true,
+            "servers": [],
+            "envVariables": {},
+            "links": []
           }
         ]
-    },
+      }
+    ],
     "projects": [
       {
         "links": [],
