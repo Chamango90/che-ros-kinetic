@@ -18,4 +18,4 @@ RUN . /opt/ros/kinetic/setup.sh \
 
 WORKDIR /projects 
 
-CMD ~/catkin_ws/devel/env.sh && tail -f /dev/null
+CMD ~/catkin_ws/devel/env.sh tail -f /dev/null
