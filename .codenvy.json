@@ -28,7 +28,7 @@
     "projects": [
       {
         "links": [],
-        "name": "ros-kinetic",
+        "name": "console-cpp-simple",
         "attributes": {
           "contribute_to_branch": [
             "master"
@@ -36,11 +36,11 @@
         },
         "type": "blank",
         "source": {
-          "location": "https://github.com/ipa-jfh/che-ros-kinetic",
+          "location": "https://github.com/che-samples/console-cpp-simple.git",
           "type": "git",
           "parameters": {}
         },
-        "path": "/che-ros-kinetic",
+        "path": "/console-cpp-simple",
         "problems": [],
         "mixins": [
           "git"
