@@ -1,30 +1,31 @@
+
 {
   "v": "4.0",
   "name": "ros-kinetic-factory",
   "workspace": {
-    "defaultEnv": "cpp",
-    "environments": [
-      {
-        "name": "dotnet",
-        "machineConfigs": [
-          {
-            "limits": {
-              "ram": 1000
+    "defaultEnv": "java",
+    "environments": {
+      "java": {
+        "machines": {
+          "dev-machine": {
+            "attributes": {
+              "memoryLimitBytes": "2147483648"
             },
-            "name": "ws-machine",
-            "type": "docker",
-            "source": {
-              "location": "https://raw.githubusercontent.com/ipa-jfh/che-ros-kinetic/master/Dockerfile",
-              "type": "dockerfile"
-            },
-            "dev": true,
-            "servers": [],
-            "envVariables": {},
-            "links": []
+            "servers": {},
+            "agents": [
+              "org.eclipse.che.ssh",
+              "org.eclipse.che.ws-agent",
+              "org.eclipse.che.terminal",
+              "org.eclipse.che.exec"
+            ]
           }
-        ]
+        },
+        "recipe": {
+          "location": "jhechtbauer/che-ros-kinetic",
+          "type": "dockerimage"
+        }
       }
-    ],
+    },
     "projects": [
       {
         "links": [],
