@@ -28,7 +28,7 @@
     "projects": [
       {
         "links": [],
-        "name": "ros-hello-world",
+        "name": "che-ros-kinetic",
         "attributes": {
           "contribute_to_branch": [
             "master"
