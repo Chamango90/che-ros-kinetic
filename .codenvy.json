@@ -28,7 +28,7 @@
     "projects": [
       {
         "links": [],
-        "name": "console-cpp-simple",
+        "name": "ros-hello-world",
         "attributes": {
           "contribute_to_branch": [
             "master"
@@ -36,11 +36,11 @@
         },
         "type": "blank",
         "source": {
-          "location": "https://github.com/che-samples/console-cpp-simple.git",
+          "location": "https://github.com/ander-ansuategi/ros-hello-world",
           "type": "git",
           "parameters": {}
         },
-        "path": "/console-cpp-simple",
+        "path": "/ros-hello-world",
         "problems": [],
         "mixins": [
           "git"
