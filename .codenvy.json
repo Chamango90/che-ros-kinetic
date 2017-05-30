@@ -14,7 +14,7 @@
             "name": "ws-machine",
             "type": "docker",
             "source": {
-              "location": "http://beta.codenvy.com/api/recipe/recipeyh2ue3us1irgy3b6/script",
+              "location": "https://raw.githubusercontent.com/ipa-jfh/che-ros-kinetic/master/Dockerfile",
               "type": "dockerfile"
             },
             "dev": true,
