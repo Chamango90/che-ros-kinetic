@@ -2,7 +2,7 @@
   "v": "4.0",
   "name": "ros-kinetic-factory",
   "workspace": {
-    "defaultEnv": "cpp",
+    "defaultEnv": "ros-kinetic",
     "environments": [
       {
         "name": "ros-kinetic",
