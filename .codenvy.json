@@ -28,7 +28,7 @@
     "projects": [
       {
         "links": [],
-        "name": "ros_tutorials",
+        "name": "ros-hello-world",
         "attributes": {
           "contribute_to_branch": [
             "master"
@@ -36,11 +36,11 @@
         },
         "type": "maven",
         "source": {
-          "location": "https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/ros/ros_tutorials/tree/kinetic-devel/roscpp_tutorials",
+          "location": "https://github.com/ander-ansuategi/ros-hello-world",
           "type": "git",
           "parameters": {}
         },
-        "path": "/ros_tutorials",
+        "path": "/ros-hello-world",
         "problems": [],
         "mixins": [
           "pullrequest"
@@ -50,7 +50,7 @@
     "name": "ros-kinetic",
     "commands": [
       {
-        "commandLine": "cd /catkin_ws && /ros_entrypoint.sh catkin_make",
+        "commandLine": "cd /catkin_ws && catkin_make",
         "name": "catkin_make",
         "attributes": {
           "previewUrl": ""
