@@ -9,7 +9,7 @@
         "machineConfigs": [
           {
             "limits": {
-              "ram": 1000
+              "ram": 2048
             },
             "name": "ws-machine",
             "type": "docker",
