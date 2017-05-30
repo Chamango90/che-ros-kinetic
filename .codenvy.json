@@ -50,7 +50,7 @@
     "name": "ros-kinetic",
     "commands": [
       {
-        "commandLine": "cd /catkin_ws && catkin_make",
+        "commandLine": "cd ~/catkin_ws && catkin_make",
         "name": "catkin_make",
         "attributes": {
           "previewUrl": ""
