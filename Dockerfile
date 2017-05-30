@@ -17,6 +17,6 @@ RUN . /opt/ros/kinetic/setup.sh \
 WORKDIR /projects 
 
 # setup entrypoint
-COPY ./catkin_ws_entrypoint.sh /
+COPY catkin_ws_entrypoint.sh /
 
 CMD /catkin_ws_entrypoint.sh && tail -f /dev/null
