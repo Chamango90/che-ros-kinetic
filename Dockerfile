@@ -5,12 +5,7 @@ RUN . /opt/ros/kinetic/setup.sh \
  && mkdir -p ~/catkin_ws/src \
  && cd ~/catkin_ws/src \
  && catkin_init_workspace \
- && ln -s /projects ~/catkin_ws/src/projects 
- 
-# Source ROS workspace
-RUN /bin/bash -c "echo 'source /opt/ros/kinetic/setup.bash' >> ~/.bashrc \
- && echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc \
- && source ~/.bashrc"           
+ && ln -s /projects ~/catkin_ws/src/projects        
  
  # Install support tools
  RUN apt-get update && apt-get install --no-install-recommends -y \
@@ -21,4 +16,8 @@ RUN /bin/bash -c "echo 'source /opt/ros/kinetic/setup.bash' >> ~/.bashrc \
 
 WORKDIR /projects 
 
-CMD tail -f /dev/null
+# setup entrypoint
+COPY ./catkin_ws_entrypoint.sh /
+
+#ENTRYPOINT ["/catkin_ws_entrypoint.sh"]
+CMD /catkin_ws_entrypoint.sh && tail -f /dev/null
