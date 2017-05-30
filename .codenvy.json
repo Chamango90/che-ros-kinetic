@@ -28,7 +28,7 @@
     "projects": [
       {
         "links": [],
-        "name": "che-ros-kinetic",
+        "name": "ros-hello-world",
         "attributes": {
           "contribute_to_branch": [
             "master"
@@ -36,11 +36,11 @@
         },
         "type": "blank",
         "source": {
-          "location": "https://github.com/ipa-jfh/che-ros-kinetic.git",
+          "location": "https://github.com/ander-ansuategi/ros-hello-world",
           "type": "git",
           "parameters": {}
         },
-        "path": "/che-ros-kinetic",
+        "path": "/ros-hello-world",
         "problems": [],
         "mixins": [
           "git"
